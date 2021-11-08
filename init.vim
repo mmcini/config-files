@@ -25,6 +25,10 @@ Plug 'mhinz/vim-startify'
 Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
+" ########################################
+" #### Shell config     	##############
+" ########################################
+
 set shell=/usr/bin/zsh
 set termguicolors
 set shellcmdflag=-ic
