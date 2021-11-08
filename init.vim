@@ -1,5 +1,5 @@
 " ########################################
-" #### Nvim plugins		        ##########
+" #### Nvim plugins             ##########
 " ########################################
 
 call plug#begin(stdpath('config') . '/plugged')
@@ -26,7 +26,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 " ########################################
-" #### Shell config     	##############
+" #### Shell config         ##############
 " ########################################
 
 set shell=/usr/bin/zsh
@@ -34,7 +34,7 @@ set termguicolors
 set shellcmdflag=-ic
 
 " ########################################
-" #### LSP server and cmp	##############
+" #### LSP server and cmp   ##############
 " ########################################
  
 set completeopt=menu,menuone,noselect
@@ -68,7 +68,7 @@ lua <<EOF
 EOF
 
 " ######################################## 
-" #### lines and indent      	 #########
+" #### lines and indent         #########
 " ########################################
 
 filetype plugin indent on        " File-dependent indent options
@@ -85,7 +85,7 @@ set autoindent                   " To copy indentation from current line
                                  "  when starting a new line.
 
 " ######################################## 
-" #### Nvim-R settings		    ##########
+" #### Nvim-R settings          ##########
 " ########################################
  
 autocmd TermOpen * setlocal nonumber "no number in console
@@ -97,13 +97,13 @@ let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
 
 " ########################################
-" #### csv.vim   	    ##################
+" #### csv.vim          ##################
 " ########################################
 
 filetype plugin on
 
 " ########################################
-" #### vimTeX   	    ##################
+" #### vimTeX           ##################
 " ########################################
 
 let g:vimtex_general_viewer='zathura'
@@ -112,7 +112,7 @@ map <F5> :setlocal spell! spelllang=en_us<CR>
 map <F6> :setlocal spell! spelllang=pt<CR>
 
 " ########################################
-" #### nvim mappings	##################
+" #### nvim mappings     #################
 " ########################################
 
 " # sets current file dir as working dir
@@ -173,20 +173,20 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
 " ########################################
-" #### Treesitter	    ##################
+" #### Treesitter       ##################
 " ########################################
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
-    enable = true,              -- false will disable the whole extension
+    enable = true,          -- false will disable the whole extension
   },
 }
 EOF
 
 " ########################################
-" #### Telescope	    ##################
+" #### Telescope        ##################
 " ########################################
 
 lua <<EOF
@@ -206,7 +206,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " ########################################
-" #### Startify     	##################
+" #### Startify         ##################
 " ########################################
 
 let s:startify_ascii_header = [
@@ -224,13 +224,13 @@ let g:startify_custom_header = startify#center(s:startify_ascii_header +
         \ startify#fortune#quote())
 
 " ########################################
-" #### Colorizer    	##################
+" #### Colorizer        ##################
 " ########################################
 
 lua require'colorizer'.setup()
 
 " ########################################
-" #### Color schemes	##################
+" #### Color schemes    ##################
 " ########################################
 
 " colorscheme dracula
