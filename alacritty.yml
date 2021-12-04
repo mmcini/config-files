@@ -1,0 +1,62 @@
+#  configures the shell
+shell:
+  program: "C:\\Windows\\System32\\wsl.exe"
+
+# sets working dir
+working_directory: "C:\\Arquivos"
+
+# TERM env
+env:
+  TERM: alacritty
+
+# dracula theme
+import:
+  - C:\\Users\\Nello\\AppData\\Roaming\\alacritty\\dracula.yml
+
+# refreshes config on the fly
+live_config_reload: true
+
+# font settings
+font:
+  normal:
+    family: "UbuntuMono NF"
+    style: Regular
+  bold:
+    family: "UbuntuMono NF"
+    style: Bold
+  italic:
+    family: "UbuntuMono NF"
+    style: Italic
+  bold_italic:
+    family: "UbuntuMono NF"
+    style: Bold Italic
+  size: 12.0
+
+draw_bold_text_with_bright_colors: true
+
+# window settings
+window:
+  title: ""
+  dynamic_title: false
+  decorations: full
+  dimensions:
+    columns: 150
+    lines: 40
+  padding:
+    x: 5
+    y: 5
+
+scrolling:
+  history: 10000
+  multiplier: 10
+
+background_opacity: 0.5
+
+# keybindings and selection
+selection:
+  save_to_clipboard: true
+
+key_bindings:
+  - { key: V, mods: Control, action: Paste  }
+  - { key: C, mods: Control, action: Copy  }
+  - { key: N, mods: Alt|Shift, action: SpawnNewInstance  }
